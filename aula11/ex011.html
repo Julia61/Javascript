@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style> 
+        body {
+            background-color: rgb(151, 186, 151);
+           
+           
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.595);
+        }
+
+        label {
+            font-size: 1.4em;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        input#pais {
+            padding: 10px;
+            border: none;
+            font-size: 1.1em;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        input#botao {
+            display: block;
+            border: none;
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(122, 158, 146);
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin: 10px;
+        }
+
+        div#confi {  
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+
+        div#res {       
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            font-size: 1.3em;
+        }
+
+        strong {
+            color: rgb(66, 87, 76);
+        }
+    </style>
+</head>
+<body>
+    <h1>País</h1>
+    <div id="confi">
+        <label for="">Seu país:</label>
+        <input type="text" name="txt" id="pais">
+        <input type="button" id="botao" value="Você é" onclick="descobrir()">
+    </div>
+        <div id="res"></div>
+    
+
+    <script>
+        function descobrir(){
+            var país = document.getElementById('pais').value
+            var res = document.getElementById('res')
+            var valor = país.value
+            res.innerHTML = `<p>Vivendo em ${país}</p>`
+            if(país == 'Brasil' || país == 'brasil'){
+                res.innerHTML += '<p>Você é <strong>BRASILEIRO</strong></p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>ESTRANGEIRO</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
