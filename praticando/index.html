@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tela-media.css">
+    <link rel="stylesheet" href="tela-grande.css">
+</head>
+<body>
+    <header>
+        <h1>Receitas</h1>
+    </header>
+
+    <main>
+        <div class="animar">
+            <h2>Bolinho de Cenoura com Cobertura de Chocolate</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 xícara de cenoura ralada</li>
+                <li>1/2 xícara de óleo</li>
+                <li>3 ovos</li>
+                <li>1 xícara de açúcar</li>
+                <li>1 e 1/2 xícara de farinha de trigo</li>
+                <li>1 colher de sopa de fermento</li>
+                <li>1 barra de chocolate ao leite ou meio amargo (para cobertura)</li>
+            </ul>
+        </div>
+
+        <div class="animar">
+            <h2>Muffin de Banana e Aveia</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>2 bananas maduras amassadas</li>
+                <li>1/2 xícara de aveia</li>
+                <li>1/2 xícara de farinha de trigo</li>
+                <li>1/4 xícara de açúcar mascavo</li>
+                <li>1/2 colher de chá de fermento</li>
+                <li>1/4 colher de chá de canela em pó</li>
+                <li>1 ovo</li>
+                <li>1/4 xícara de leite</li>
+            </ul>
+        </div>
+
+        <div class="animar">
+            <h2>Pão de Queijo Fácil</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 xícara de polvilho doce</li>
+                <li>1 xícara de polvilho azedo</li>
+                <li>1 xícara de leite</li>
+                <li>1/2 xícara de óleo</li>
+                <li>1 ovo</li>
+                <li>1 xícara de queijo ralado (parmesão ou mussarela)</li>
+            </ul>
+        </div>
+
+        <div class="animar">
+            <h2>Smoothie de Morango e Banana</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 banana madura</li>
+                <li>1 xícara de morangos</li>
+                <li>1/2 xícara de leite (pode ser vegetal)</li>
+                <li>1 colher de sopa de mel (opcional)
+                Gelo a gosto</li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Feito por Julia</p>
+    </footer>
+
+    <script>
+        var animacao = document.querySelectorAll('div.animar')
+
+        animacao.forEach(function(animacao) {
+            animacao.addEventListener('click', function() {
+                animacao.classList.toggle('anima');
+            })
+        })
+            
+        
+    </script>
+</body>
+</html>

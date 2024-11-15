@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1024px) {
+    body {
+        background: url(imagens/imagem1.png) no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    
+        
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+    
+        
+    }
+
+    div { 
+        max-width: 600px;
+        min-width: 400px;
+        min-height: 400px;
+        max-width: 600px;
+        margin: 20px;
+        margin-bottom: 60px;
+    }
+
+    ul > li {
+        font-size: 1.3em;
+    }
+
+}
