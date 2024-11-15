@@ -10,12 +10,12 @@
 </head>
 <body>
     <header>
-        <h1>Receitas</h1>
+        <h1 id="mgs">Receitas</h1>
     </header>
 
     <main>
         <div class="animar">
-            <h2>Bolinho de Cenoura com Cobertura de Chocolate</h2>
+            <h2 class="mouseIn">Bolinho de Cenoura com Cobertura de Chocolate</h2>
             <h3>Ingredientes:</h3>
             <ul>
                 <li>1 xícara de cenoura ralada</li>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="animar">
-            <h2>Muffin de Banana e Aveia</h2>
+            <h2 class="mouseIn">Muffin de Banana e Aveia</h2>
             <h3>Ingredientes:</h3>
             <ul>
                 <li>2 bananas maduras amassadas</li>
@@ -43,8 +43,8 @@
             </ul>
         </div>
 
-        <div class="animar">
-            <h2>Pão de Queijo Fácil</h2>
+        <div class="animar" >
+            <h2 class="mouseIn">Pão de Queijo Fácil</h2>
             <h3>Ingredientes:</h3>
             <ul>
                 <li>1 xícara de polvilho doce</li>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="animar">
-            <h2>Smoothie de Morango e Banana</h2>
+            <h2 class="mouseIn">Smoothie de Morango e Banana</h2>
             <h3>Ingredientes:</h3>
             <ul>
                 <li>1 banana madura</li>
@@ -76,11 +76,30 @@
     <script>
         var animacao = document.querySelectorAll('div.animar')
 
+        var receita = document.getElementById('mgs')
+
+        receita.addEventListener('click', entrar)
+
+        
+
+        
+
         animacao.forEach(function(animacao) {
             animacao.addEventListener('click', function() {
                 animacao.classList.toggle('anima');
             })
         })
+
+        function entrar(){
+            if (receita.style.backgroundColor === 'rgb(111, 63, 156)') {
+                receita.style.backgroundColor = 'rgb(214, 189, 237)'
+            }
+            else {
+                receita.style.backgroundColor = 'rgb(111, 63, 156)'
+            }
+        }
+
+        
             
         
     </script>
