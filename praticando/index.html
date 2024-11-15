@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Receitas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tela-media.css">
@@ -86,7 +87,7 @@
 
         animacao.forEach(function(animacao) {
             animacao.addEventListener('click', function() {
-                animacao.classList.toggle('anima');
+                animacao.classList.toggle('anima');  
             })
         })
 
@@ -97,6 +98,8 @@
             else {
                 receita.style.backgroundColor = 'rgb(111, 63, 156)'
             }
+
+            
         }
 
         
