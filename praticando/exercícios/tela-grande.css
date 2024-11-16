@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 1024px) {
     body {
-        background: url(imagens/imagem1.png) no-repeat;
+        background: url(../imagens/imagem1.png) no-repeat;
         background-size: cover;
         height: 100%;
         display: flex;

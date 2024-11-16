@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+ 
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.463);
+        }
+
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.434);
+            width: 520px;
+            height: 300px;
+            border-radius: 8px;
+            background-color: white;
+
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        div#imgs {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background-position: right center;
+            background-size: cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Hora do Dia</h1>
+        <div class="container">
+            <p>o</p>
+            <div id="imgs">
+        
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        var adicionaHoras = new Date()
+        var paragrafo = document.querySelector('p')
+        var horas = adicionaHoras.getHours()
+        
+        
+        var imagem = document.getElementById('imgs')
+        var corpo = document.querySelector('body')
+        paragrafo.innerHTML = `Agora são ${horas} horas`
+        if(horas >=6 && horas < 12){
+            imagem.style.backgroundImage = "url('../imagens01/dia.jpg')"
+            corpo.style.backgroundColor = 'rgb(204, 188, 142)'
+        }
+
+        else if(horas >= 12 && horas < 18){
+            corpo.style.backgroundColor = 'rgb(173, 123, 103)'
+            imagem.style.backgroundImage = "url('../imagens01/tarde.jpg')"
+        }
+        else if (horas >= 18 && horas <= 23){
+            corpo.style.backgroundColor = 'rgb(74, 76, 76)'
+            imagem.style.backgroundImage = "url('../imagens01/noite.jpg')"
+        }
+        else{
+            corpo.style.backgroundColor = 'rgb(44, 45, 45)'
+            imagem.style.backgroundImage = "url('../imagens01/madrugada.jpg')"
+        }
+    </script>
+</body>
+</html>
