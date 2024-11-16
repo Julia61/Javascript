@@ -9,7 +9,7 @@
             margin: 0px;
             padding: 0px;
             height: 100vh;
- 
+            
         }
 
         h1 {
@@ -19,6 +19,7 @@
 
         main {
             display: flex;
+            flex: 1 1 0;
             flex-flow: column nowrap;
             align-items: center;
             height: 100vh;
@@ -29,10 +30,15 @@
             flex-flow: column;
             align-items: center;
             box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.434);
-            width: 520px;
+            width: 100%;
+            max-width: 520px;
+            
             height: 300px;
             border-radius: 8px;
             background-color: white;
+            
+            
+            box-sizing: border-box; 
 
         }
 
@@ -54,7 +60,7 @@
     <main>
         <h1>Hora do Dia</h1>
         <div class="container">
-            <p>o</p>
+            <p></p>
             <div id="imgs">
         
             </div>
