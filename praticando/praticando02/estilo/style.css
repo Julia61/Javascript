@@ -1,42 +1,42 @@
 @charset "UTF-8";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
     margin: 0px;
-    height: 100vh;
-    width: 100vw;
-    flex-flow: column nowrap;
     padding: 0px;
-    background-color: rgb(85, 154, 184);
     box-sizing: border-box;
+    background-color: rgb(129, 95, 141);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
+    text-align: center;
     color: white;
-    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.413);
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.374);
 }
 
-#botao{
-    display: block;
-}
-
-input {
-    margin-top: 10px;
-}
-
-main {
-    
-    width: 500px;
-    border-radius: 5px;
-    min-height: 160px;
-    padding: 10px;
+section {
     background-color: white;
+    padding: 15px;
+    max-width: 500px;
+    font-size: 1.3em;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.358);
 }
 
-#imgs {
-    width: 300px;
-    height: 200px;
+#foto {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-style: italic;
 }

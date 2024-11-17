@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +8,21 @@
 </head>
 <body>
     <h1>Verificador de Idade</h1>
-    <main>
-        
-        <form action="index.html" method="get">
-            <div class="nascimentos">
-                <label for="nascimento">Ano de Nascimento:</label>
-                <input type="number" name="inascimento" id="nascimento">
-            </div>
-
-            
-                <label for="">Sexo:</label>
-                <input type="radio" name="isexo" id="sexoM" onclick="masculino()"><label for="sexoM">Masculino</label>
-                <input type="radio" name="isexo" id="SexoF"><label for="sexoF">Feminino</label>
-            
-
-            <input type="button" value="Verificar" id="botao" onclick="verificando()">
-        </form>
-
-        <p>Preencha os dados acima para ver o resultado!</p>
-        <div id="imgs">
-
-        </div>
-    </main>
-
-    <script>
-        var ano = new Date();
-var anoAgora = ano.getFullYear();
-var paragrafo = document.querySelector('p');
-var imagem = document.getElementById('imgs');
-
-// Função para verificar e alterar a imagem
-function masculino() {
-    var idade = document.getElementById('nascimento').value; // Obtém o valor de idade diretamente aqui
-    var converter = Number(idade);  // Converte o valor para número
-    var idadeAtual = anoAgora - converter; // Calcula a idade
-
-    // Verifica se a idade é menor que 30 e altera a imagem
-    if (idadeAtual < 30) {
-        imagem.style.backgroundImage = "url('../imagens/jovem-homem.jpg')";
-    } else {
-        imagem.style.backgroundImage = ""; // Limpa a imagem ou coloca outra imagem, caso queira
-    }
-}
-
-// Função principal que é chamada ao clicar no botão
-function verificando() {
-    masculino(); // Chama a função masculino ao clicar
-}
-    </script>
-    
+    <section>
+        <p>Ano de nascimento:
+            <input type="number" name="inascimento" id="nascimento">
+        </p>
+        <p>Sexo: <input type="radio" name="sex" id="sexoM" checked>
+        <label for="sexoM">Maculino</label>
+        <input type="radio" name="sex" id="SexoF">
+        <label for="SexoF">Feminino</label>
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="verificador()">
+        </p>
+        <p id="res">Preencha os dados acima para ver o resultado!</p>
+    </section>
+    <footer>Feito por Julia</footer>
+    <script src="script.js"></script>
 </body>
 </html>
