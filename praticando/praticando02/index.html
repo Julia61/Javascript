@@ -22,7 +22,7 @@
                 <input type="radio" name="isexo" id="SexoF"><label for="sexoF">Feminino</label>
             
 
-            <input type="button" value="Verificar" id="botao">
+            <input type="button" value="Verificar" id="botao" onclick="verificando()">
         </form>
 
         <p>Preencha os dados acima para ver o resultado!</p>
@@ -32,7 +32,29 @@
     </main>
 
     <script>
+        var ano = new Date();
+var anoAgora = ano.getFullYear();
+var paragrafo = document.querySelector('p');
+var imagem = document.getElementById('imgs');
 
+// Função para verificar e alterar a imagem
+function masculino() {
+    var idade = document.getElementById('nascimento').value; // Obtém o valor de idade diretamente aqui
+    var converter = Number(idade);  // Converte o valor para número
+    var idadeAtual = anoAgora - converter; // Calcula a idade
+
+    // Verifica se a idade é menor que 30 e altera a imagem
+    if (idadeAtual < 30) {
+        imagem.style.backgroundImage = "url('../imagens/jovem-homem.jpg')";
+    } else {
+        imagem.style.backgroundImage = ""; // Limpa a imagem ou coloca outra imagem, caso queira
+    }
+}
+
+// Função principal que é chamada ao clicar no botão
+function verificando() {
+    masculino(); // Chama a função masculino ao clicar
+}
     </script>
     
 </body>
