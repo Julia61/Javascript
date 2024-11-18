@@ -39,11 +39,18 @@
     </div>
 
     <script>
-        var horas = new Date()
+        function atualizarHoras(){
+        var agora = new Date()
+        var horas = String(agora.getHours()).padStart(2, '0')
+        var minutos = String(agora.getMinutes()).padStart(2, '0')
+        var segundos = String(agora.getSeconds()).padStart(2, '0')
         var di = document.getElementById('horas')
-        di.innerHTML = horas.getHours()
-        di.innerHTML += ':'
-        di.innerHTML += horas.getMinutes()
+        di.innerHTML = `${horas}:${minutos}:${segundos}`
+    }
+    atualizarHoras()
+
+    setInterval(atualizarHoras, 1000)
+
     </script>
 </body>
 </html>
